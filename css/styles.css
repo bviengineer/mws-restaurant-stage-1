@@ -148,9 +148,9 @@ nav h1 a {
 /* ====================== Restaurant Listing ====================== */
 .restaurants-list {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: auto auto auto;
-  grid-template-areas: "r r r";
+  /* grid-template-areas: "r r r"; named areas or columns */
 }
 #restaurants-list {
   background-color: #f3f3f3;
@@ -173,9 +173,9 @@ nav h1 a {
   background-color: #ccc;
   display: inline;
   margin: 0;
-  max-width: 50%;
-  min-height: 20%;
-  min-width: 20%;
+  max-width: 60%;
+  min-height: 40%;
+  min-width: 30%;
 }
 #restaurants-list li h1 {
   color: #f18200;
