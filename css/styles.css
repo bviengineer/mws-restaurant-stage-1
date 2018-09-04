@@ -55,7 +55,7 @@ nav {
   background-color: #252831;
   text-align:center;
 }
-nav h1 {a
+nav h1 {
   margin: auto;
 }
 nav h1 a {
@@ -104,20 +104,35 @@ nav h1 a {
   background-color: #ccc;
 }
 /* ====================== Restaurant Filtering ====================== */
-.filter-options {
-  width: 100%;
-  height: auto;
-  padding: 1em;
-  background-color: #3397DB;
-  align-items: center;
-  grid: 
-}
 .filter-options h2 {
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: normal;
   line-height: 1;
   margin: 0 20px;
+  text-align: center;
+}
+.filter-options {
+  height: 100%;
+  padding: 1em; 
+  background-color: #3397DB;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+    "fr fr fr fr fr fr fr fr fr fr fr fr"
+    "n n n n n n c c c c c c";
+}
+.filter-results-header {
+  grid-area: fr;
+}
+.neighborhoods {
+  grid-area: n;
+  margin-left: 33em; 
+}
+.cuisines {
+  grid-area: c;
 }
 .filter-options select {
   background-color: white;
@@ -126,18 +141,23 @@ nav h1 a {
   font-size: 11pt;
   height: 35px;
   letter-spacing: 0;
-  margin: 10px;
+  /* margin: 10px; */
   padding: 0 10px;
   width: 200px;
 }
-
 /* ====================== Restaurant Listing ====================== */
+.restaurants-list {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "r r r";
+}
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
-  text-align: center;
+  /* text-align: center; */
 }
 #restaurants-list li {
   background-color: #fff;
@@ -146,16 +166,16 @@ nav h1 a {
   margin: 15px auto;
   min-height: 380px;
   padding: 20px 30px 25px;
-  text-align: left;
+  text-align: center;
   width: auto;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
-  display: block;
+  display: inline;
   margin: 0;
-  max-width: 100%;
-  min-height: 248px;
-  min-width: 100%;
+  max-width: 50%;
+  min-height: 20%;
+  min-width: 20%;
 }
 #restaurants-list li h1 {
   color: #f18200;
@@ -261,7 +281,7 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
