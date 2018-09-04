@@ -109,22 +109,27 @@ nav h1 a {
   font-size: 1.5rem;
   font-weight: normal;
   line-height: 1;
-  margin: 0 20px;
+  /* margin: 0 20px; */
   text-align: center;
 }
 .filter-options {
   height: 100%;
   padding: 1em; 
   background-color: #3397DB;
+}
+.refine-list {
   display: grid;
-  grid-gap: 1px;
-  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 3px;
+  grid-template-columns: repeat(2, minmax(5px, 1fr));
+  grid-template-rows: auto auto;
+  
+  /* grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto auto;
   grid-template-areas: 
     "fr fr fr fr fr fr fr fr fr fr fr fr"
-    "n n n n n n c c c c c c";
+    "n n n n n n c c c c c c"; */
 }
-.filter-results-header {
+/* .filter-results-header {
   grid-area: fr;
 }
 .neighborhoods {
@@ -133,7 +138,7 @@ nav h1 a {
 }
 .cuisines {
   grid-area: c;
-}
+} */
 .filter-options select {
   background-color: white;
   border: 1px solid #fff;
@@ -176,6 +181,12 @@ nav h1 a {
   max-width: 80%;
   min-height: auto;
   min-width: auto;
+}
+.restaurant-img {
+  border-radius: 5px;
+  border: 1.5px solid;
+  padding: 10px;
+  box-shadow: 5px 5px teal;
 }
 #restaurants-list li h1 {
   color: #f18200;
