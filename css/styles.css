@@ -173,9 +173,9 @@ nav h1 a {
   background-color: #ccc;
   display: inline;
   margin: 0;
-  max-width: 60%;
-  min-height: 40%;
-  min-width: 30%;
+  max-width: 80%;
+  min-height: auto;
+  min-width: auto;
 }
 #restaurants-list li h1 {
   color: #f18200;
