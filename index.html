@@ -25,19 +25,15 @@
     <section>
       <div class="filter-options">
         <h2 class="filter-results-header">Filter Results</h2>
-
-        <div class="neighborhoods">
-          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-            <option value="all">All Neighborhoods</option>
-          </select>
-        </div>
-        
-        <div class="cuisines">
-          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-            <option value="all">All Cuisines</option>
-          </select>
-        </div>
-      
+        <div class="refine-list">
+          <select id="neighborhoods-select" class="neighborhoods" name="neighborhoods" onchange="updateRestaurants()">
+              <option value="all">All Neighborhoods</option>
+            </select>
+           
+            <select id="cuisines-select" class="cuisines" name="cuisines" onchange="updateRestaurants()">
+              <option value="all">All Cuisines</option>
+            </select>
+        </div> <!--closing div for refine-lists-->
       </div>
       <ul id="restaurants-list" class="restaurants-list"></ul>
     </section>
