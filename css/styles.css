@@ -215,7 +215,8 @@ nav h1 a {
 .inside #map {
   background-color: #ccc;
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
+  width: auto;
 }
 .inside #footer {
   bottom: 0;
@@ -235,7 +236,7 @@ nav h1 a {
 #restaurant-img {
   max-width: 80%;
   min-width: 10%;
-  margin-left: -10px;
+  margin-left: -3em;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -263,6 +264,7 @@ nav h1 a {
 #reviews-container {
   padding: 30px 40px 80px;
   min-width: 10%;
+  max-width: 45%;
 }
 #reviews-container h2 {
   color: #f58500;
