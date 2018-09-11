@@ -34,10 +34,11 @@ self.addEventListener("fetch", function(event){
                 console.log(event.response, " was not in the cache, will obtain it via a fetch"); //testing
                 return fetch(event.request)
                 
-                //gets returned request and push fetched file from source origin to the cache
+                //Receives fetched resource form above return statement & pushes it to the cache
                 .then(function(response){
+                    const response2 = response.clone(); //clones response site matt & vas
                     caches.open("appVersion1").then(function(cache){
-                        cache.put(event.request, response);
+                        cache.put(event.request, response2);
                         console.log(cache) //verifying new resoruce has been added to the cache
                     })
                     return response;
