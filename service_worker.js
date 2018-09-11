@@ -1,8 +1,6 @@
-console.log("Service Worker Successfully Registered");
-
-self.addEventListener("fetch", function(event){
-    console.log(event.request);
-});
+// self.addEventListener("fetch", function(event){
+//     console.log(event.request);
+// });
 
 const offlineFiles = [
     "/",
