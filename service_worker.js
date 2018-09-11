@@ -1,7 +1,3 @@
-// self.addEventListener("fetch", function(event){
-//     console.log(event.request);
-// });
-
 //Array of files to be cached for offline use 
 const offlineFiles = [
     "/",
@@ -23,9 +19,22 @@ self.addEventListener("install", function(event){
             console.log("I'm in side of the caches.open");
             return cache.addAll(offlineFiles);            
         })
+
     );
 });
 
-// caches.open("offlineFiles").then(function(cache){
-//     console.log(offlineFiles);
-// });
+//Fetching requested files
+self.addEventListener("fetch", function(event){
+    console.log(event.request); //testing
+    event.respondWith(
+        catches.match(event.request).then(function(response){
+            if(response){
+                console.log(event.request, " is in the cache"); //testing
+                return response;
+            } else {
+                console.log(event.reponse, " was not in the cache, will obtain it via fetch"); //testing
+                return fetch(event.request);
+            }            
+        })
+    );
+});
