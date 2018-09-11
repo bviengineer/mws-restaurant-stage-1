@@ -36,7 +36,7 @@ self.addEventListener("fetch", function(event){
                 
                 //Receives fetched resource form above return statement & pushes it to the cache
                 .then(function(response){
-                    const response2 = response.clone(); //clones response site matt & vas
+                    const response2 = response.clone(); //clones response 
                     caches.open("appVersion1").then(function(cache){
                         cache.put(event.request, response2);
                         console.log(cache) //verifying new resoruce has been added to the cache
