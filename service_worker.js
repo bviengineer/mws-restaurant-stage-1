@@ -2,7 +2,7 @@
 const offlineFiles = [
     "/",
     "index.html", "restaurant.html",
-    "css/styles.css",
+    "/css/styles.css",
     "/data/restaurants.json",
     "/js/main.js", "/js/restaurant_info.js", "/js/dbhelper.js",
     "/img/1.jpg", "/img/2.jpg", "/img/3.jpg", "/img/4.jpg", "/img/5.jpg",
@@ -15,11 +15,10 @@ const offlineFiles = [
 //Adds offlineFiles to cache
 self.addEventListener("install", function(event){
     event.waitUntil(
-        caches.open("version1").then(function(cache){
-            console.log("I'm in side of the caches.open");
+        caches.open("appVersion1").then(function(cache){
+            console.log("I'm in side of the caches.open-initial entry of files to cache");
             return cache.addAll(offlineFiles);            
         })
-
     );
 });
 
@@ -27,13 +26,26 @@ self.addEventListener("install", function(event){
 self.addEventListener("fetch", function(event){
     console.log(event.request); //testing
     event.respondWith(
-        catches.match(event.request).then(function(response){
+        caches.match(event.request).then(function(response){
             if(response){
                 console.log(event.request, " is in the cache"); //testing
                 return response;
             } else {
-                console.log(event.reponse, " was not in the cache, will obtain it via fetch"); //testing
-                return fetch(event.request);
+                console.log(event.response, " was not in the cache, will obtain it via a fetch"); //testing
+                return fetch(event.request)
+                
+                //gets returned request and push fetched file from source origin to the cache
+                .then(function(response){
+                    caches.open("appVersion1").then(function(cache){
+                        cache.put(event.request, response);
+                        console.log(cache) //verifying new resoruce has been added to the cache
+                    })
+                    return response;
+                  
+                    //Will catch and log error if one occurs while adding new resource to cache  
+                }).catch(function(error){
+                    console.log(error);
+                });
             }            
         })
     );
