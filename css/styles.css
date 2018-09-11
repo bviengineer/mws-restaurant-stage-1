@@ -236,7 +236,7 @@ nav h1 a {
 #restaurant-img {
   max-width: 80%;
   min-width: 10%;
-  margin-left: -3em;
+  /* margin-left: -1em; */
 }
 #restaurant-address {
   font-size: 12pt;
@@ -294,4 +294,15 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* Media Queries */
+@media screen and (max-width: 559px) {
+  /* ul#map-container {
+    display: none;
+  } */
+
+  section#restaurant-container {
+    padding: 1em;
+  }
 }
