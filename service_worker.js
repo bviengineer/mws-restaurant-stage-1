@@ -16,7 +16,7 @@ const offlineFiles = [
 self.addEventListener("install", function(event){
     event.waitUntil(
         caches.open("appVersion1").then(function(cache){
-            console.log("I'm in side of the caches.open-initial entry of files to cache"); //testing purposes
+           // console.log("I'm in side of the caches.open-initial entry of files to cache"); //testing purposes
             return cache.addAll(offlineFiles);            
         })
     );
@@ -28,10 +28,10 @@ self.addEventListener("fetch", function(event){
     event.respondWith(
         caches.match(event.request).then(function(response){
             if(response){
-                console.log(event.request, " is in the cache"); //testing
+                //console.log(event.request, " is in the cache"); //testing
                 return response;
             } else {
-                console.log(event.response, " was not in the cache, will obtain it via a fetch"); //testing
+               // console.log(event.response, " was not in the cache, will obtain it via a fetch"); //testing
                 return fetch(event.request)
                 
                 //Receives fetched resource form above return statement & pushes it to the cache

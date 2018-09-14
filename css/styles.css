@@ -296,13 +296,23 @@ nav h1 a {
   color: #666;
 }
 
-/* Media Queries */
-@media screen and (max-width: 559px) {
+/* 
+  Media Queries 
+*/
+@media screen and (max-width: 750px) {
+  .inside #map {
+    position: static;
+    width: 100%;
+  }
+
+  /* section#restaurant-container {
+    padding: 1em;
+  } */
+}
+
+@media screen and (max-width: 930px) {
   /* ul#map-container {
     display: none;
   } */
 
-  section#restaurant-container {
-    padding: 1em;
-  }
 }

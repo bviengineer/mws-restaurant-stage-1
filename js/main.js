@@ -65,9 +65,8 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
-    option.role = "option"; //adds ARIA role attribute with a value of "option" to each item in dropdown list
+    option.alt = "option"; //adds ARIA role attribute with a value of "option" to each item in dropdown list
     select.append(option);
-    return option; //testing to see if doing this will give each item the role="option"
   });
 }
 
