@@ -67,6 +67,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     option.value = cuisine;
     option.role = "option"; //adds ARIA role attribute with a value of "option" to each item in dropdown list
     select.append(option);
+    return option; //testing to see if doing this will give each item the role="option"
   });
 }
 
@@ -163,7 +164,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = "A picture of selected cuisine";
+  image.alt = "A picture of ", restaurant.name, " restaurant";
   li.append(image);
 
   const name = document.createElement('h1');
