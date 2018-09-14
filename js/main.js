@@ -36,6 +36,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
+    option.role = "option"; //adds ARIA role attribute with a value of "option" to each item in dropdown list
     select.append(option);
   });
 }
@@ -64,6 +65,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
+    option.role = "option"; //adds ARIA role attribute with a value of "option" to each item in dropdown list
     select.append(option);
   });
 }
@@ -179,7 +181,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  more.tabIndex = "2";
+  more.tabindex = "0"; //adds a tabindex to each restaurant returned after the search 
   li.append(more)
   return li
 }
