@@ -300,9 +300,23 @@ nav h1 a {
   Media Queries 
 */
 @media screen and (max-width: 750px) {
-  .inside #map {
-    position: static;
+ #breadcrumb {
+   padding-left: 1px;
+   width: auto;
+   font-weight: 600;
+ } 
+  
+  .inside #map-container {
+    /* position: static; */
     width: 100%;
+    height: 75%;
+    background-color: rebeccapurple;
+  }
+
+  .inside #restaurant-container {
+    /* position: static; */
+    max-width: 100%;
+    background-color: yellow;
   }
 
   /* section#restaurant-container {
