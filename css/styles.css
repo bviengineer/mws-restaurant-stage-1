@@ -10,7 +10,7 @@ body,td,th,p{
 body {
 	background-color: #fdfdfd;
 	margin: 0;
-	position:relative;
+	/* position:relative; */
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
@@ -50,6 +50,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 /* ====================== Navigation ====================== */
 nav {
+  padding-top: 1em;
   width: 100%;
   height: 80px;
   background-color: #252831;
@@ -234,8 +235,8 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-  max-width: 80%;
-  min-width: 10%;
+  max-width: 90%;
+  /* min-width: 10%; */
   /* margin-left: -1em; */
 }
 #restaurant-address {
@@ -252,15 +253,15 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-  max-width: 81%;
-  min-width: 60%;
+  width: 100%;
+  /* min-width: 60%; */
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 140px 40px 30px;
-  /* width: 50%; */
-  max-width: 45%;
+  width: 50%;
+  /* max-width: 45%; */
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -296,31 +297,82 @@ nav h1 a {
   color: #666;
 }
 
-/* 
-  Media Queries 
-*/
-@media screen and (max-width: 750px) {
- #breadcrumb {
-   padding-left: 1px;
-   width: auto;
-   font-weight: 600;
- } 
-  
+/*========================== Media Queries =================*/
+@media screen and (max-width: 750px) {  
+  html {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    /* margin: 0; */
+    width: 100%;
+  }
+  #breadcrumb {
+    text-align: center;
+    padding: 0;
+    width: auto;
+    font-weight: 600;
+  } 
+  #restaurant-container{
+    position: static;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    width: 100%;
+  }
+  #restaurant-name{
+    margin: 120px 0 10px;
+    text-align: center;
+    font-size: 1.8em;
+  }
+  #restaurant-img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }  
+  #restaurant-cuisine {
+    max-width: 100%;
+  }
+  #restaurant-address {
+    text-align: center;
+  }
+  #restaurant-hours {
+    padding: 0.5em;
+    text-align: center;
+  }
+  #reviews-container {
+    position: static;
+    display: block;
+    padding: 10px 20px 0px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
   .inside #map-container {
-    /* position: static; */
+    position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     height: 75%;
     background-color: rebeccapurple;
   }
-
-  .inside #restaurant-container {
-    /* position: static; */
-    max-width: 100%;
-    background-color: yellow;
+  .inside #map {
+    position: static;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    width: 100%;    
   }
-
-  /* section#restaurant-container {
-    padding: 1em;
+  .inside #footer {
+    position: static;
+    width: 100%;
+  }
+  /* #reviews-container {
+    padding: 30px 40px 80px;
+    width: 100%;
   } */
 }
 
