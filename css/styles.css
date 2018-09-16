@@ -202,6 +202,8 @@ nav h1 a {
 .inside header {
   position: fixed;
   top: 0;
+  margin-right: auto;
+  margin-left:auto;
   width: 100%;
   z-index: 1000;
 }
@@ -299,12 +301,9 @@ nav h1 a {
 
 /*========================== Media Queries =================*/
 @media screen and (max-width: 750px) {  
-  html {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    /* margin: 0; */
+  .insdie header {
     width: 100%;
+    position: none;
   }
   #breadcrumb {
     text-align: center;
@@ -340,6 +339,8 @@ nav h1 a {
   #restaurant-hours {
     padding: 0.5em;
     text-align: center;
+    margin: auto;
+    align-self: center;
   }
   #reviews-container {
     position: static;
@@ -348,6 +349,9 @@ nav h1 a {
     margin-right: auto;
     margin-left: auto;
     width: 100%;
+  }
+  #reviews-container h2 {
+    text-align: center;
   }
   .inside #map-container {
     position: static;
