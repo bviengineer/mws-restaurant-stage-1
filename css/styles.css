@@ -308,7 +308,7 @@ nav h1 a {
   }
   #breadcrumb {
     text-align: center;
-    padding: 0;
+    padding: 0.5em;
     width: auto;
     font-weight: 600;
   } 
