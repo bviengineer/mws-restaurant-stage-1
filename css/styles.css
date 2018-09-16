@@ -303,7 +303,7 @@ nav h1 a {
 @media screen and (max-width: 750px) {  
   .insdie header {
     width: 100%;
-    position: none;
+    position: static;
   }
   #breadcrumb {
     text-align: center;
