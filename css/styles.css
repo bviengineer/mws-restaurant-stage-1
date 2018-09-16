@@ -266,11 +266,11 @@ nav h1 a {
   width: 50%;
   /* max-width: 45%; */
 }
-#reviews-container {
+/* #reviews-container {
   padding: 30px 40px 80px;
   min-width: 10%;
-  /* max-width: 45%; */
-}
+  max-width: 45%;
+} */
 #reviews-container h2 {
   color: #f58500;
   font-size: 24pt;
@@ -355,13 +355,14 @@ nav h1 a {
   #reviews-container {
     position: static;
     display: block;
-    padding: 10px 20px 0px;
+    /* padding: 10px 20px 0px; */
     margin-right: auto;
     margin-left: auto;
     width: 100%;
   }
   #reviews-container h2 {
     text-align: center;
+    margin: 0;
   }
   .inside #map-container {
     position: static;
