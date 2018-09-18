@@ -272,11 +272,6 @@ nav h1 a {
   width: 50%;
   /* max-width: 45%; */
 }
-/* #reviews-container {
-  padding: 30px 40px 80px;
-  min-width: 10%;
-  max-width: 45%;
-} */
 #restaurant-hours{
   padding: 0.5em;
   text-align: center;
@@ -289,6 +284,7 @@ nav h1 a {
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
+  padding-top: 1pt;
   padding-bottom: 1pt;
 }
 #reviews-list {
@@ -300,11 +296,11 @@ nav h1 a {
   border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
-  margin: 0 0 30px;
+  margin: 0 auto 30px;
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
-  width: 90%;
+  width: 75%;
 }
 #reviews-list li p {
   margin: 12px 0 10px;
