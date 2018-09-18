@@ -9,7 +9,12 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`;
+    
+    //return `http://localhost:${port}/data/restaurants.json`; for display on local host
+    
+    //Thank you to Julia Fuhrman for sharing how to get the app to display on GitHub Pages https://github.com/JulNicole06/restaurant-reviews-app/blob/master/js/dbhelper.js
+    
+    return `https://bviengineer.github.io/mws-restaurant-stage-1/data/restaurants.json`;    
   }
 
   /**
