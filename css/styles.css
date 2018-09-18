@@ -44,7 +44,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
-  padding: 25px;
+  padding: 20px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -166,6 +166,10 @@ nav h1 a {
   min-width: auto;
 }
 .restaurant-img {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 5px;
   border: 1.5px solid;
   padding: 10px;
@@ -224,7 +228,7 @@ nav h1 a {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
+  /* position: absolute; */
   width: 50%;
 }
 #restaurant-name {
@@ -233,8 +237,9 @@ nav h1 a {
   font-size: 20pt;
   font-weight: 200;
   letter-spacing: 0;
-  margin: 15px 0 30px;
+  margin: 165px 0 10px;
   text-transform: uppercase;
+  text-align: center;
   line-height: 1.1;
 }
 #restaurant-img {
@@ -244,6 +249,7 @@ nav h1 a {
 }
 #restaurant-address {
   font-size: 12pt;
+  text-align: center;
   margin: 10px 0px;
 }
 #restaurant-cuisine {
@@ -252,17 +258,17 @@ nav h1 a {
   font-size: 12pt;
   font-weight: 300;
   letter-spacing: 10px;
-  margin: 0 0 20px;
+  margin: 0 auto 20px;
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-  width: 100%;
+  width: 94%;
   /* min-width: 60%; */
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
+  /* padding: 140px 40px 30px; */
   width: 50%;
   /* max-width: 45%; */
 }
@@ -271,8 +277,15 @@ nav h1 a {
   min-width: 10%;
   max-width: 45%;
 } */
+#restaurant-hours{
+  padding: 0.5em;
+  text-align: center;
+  margin: auto;
+  align-self: center;
+}
 #reviews-container h2 {
   color: #f58500;
+  text-align: center;
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
@@ -291,7 +304,7 @@ nav h1 a {
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
-  width: auto;
+  width: 90%;
 }
 #reviews-list li p {
   margin: 12px 0 10px;
@@ -322,6 +335,7 @@ nav h1 a {
   #restaurant-container{
     position: static;
     display: block;
+    margin-top: 140px;
     margin-right: auto;
     margin-left: auto;
     padding: 0;
@@ -384,12 +398,9 @@ nav h1 a {
   }
   .inside #footer {
     position: static;
-    width: 100%;
+    width: auto;
+    text-align: left;
   }
-  /* #reviews-container {
-    padding: 30px 40px 80px;
-    width: 100%;
-  } */
 }
 
 @media screen and (max-width: 930px) {
