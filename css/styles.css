@@ -291,7 +291,7 @@ nav h1 a {
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
-  width: 75%;
+  width: auto;
 }
 #reviews-list li p {
   margin: 12px 0 10px;
@@ -356,6 +356,7 @@ nav h1 a {
     position: static;
     display: block;
     /* padding: 10px 20px 0px; */
+    padding: 0;
     margin-right: auto;
     margin-left: auto;
     width: 100%;
