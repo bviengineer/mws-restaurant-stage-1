@@ -1,3 +1,8 @@
+/*
+Matthew Cranford's Part 4 Walkthrough was a guide during this part of the project.
+https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/
+*/
+
 //Array of files to be cached for offline use 
 const offlineFiles = [
     "/",
